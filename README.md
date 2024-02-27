@@ -28,8 +28,18 @@ Skip Test
 - ``mvn clean install -Djacoco.skip=true``
 
 
-Environment Variables
------
-| **NAME** | **VALUE** |
-| ------ | ------ |
-| -Dspring.profiles.active| local |
+### Swagger
+
+- http://localhost:8080/
+
+### H2
+
+- http://localhost:8080/h2-console
+- url: jdbc:h2:mem:api-price;DB_CLOSE_DELAY=-1
+- username: admin
+- password: admin
+
+### Jacoco
+
+-../target/site/jacoco/index.html
+

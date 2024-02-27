@@ -12,7 +12,7 @@ spring:
       enabled: true
       force: true
   datasource:
-    url: jdbc:h2:mem:BackendCash;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:mem:api-price;DB_CLOSE_DELAY=-1
     username: admin
     password: admin
     driver-class-name: org.h2.Driver
