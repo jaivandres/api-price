@@ -7,15 +7,15 @@ info:
   version: '1.0'
 externalDocs:
   description: Docs
-  url: https://frubana.atlassian.net/wiki/spaces/OPS/pages/3049455621/ops-sac-backoffice
+  url: https://Capitole.atlassian.net/wiki/spaces/OPS/pages/3049455621/ops-sac-backoffice
 servers:
   - url: http://localhost:8080
     description: Local
-  - url: https://ops-sac-backoffice-operations.development.microservices.frubana.com
+  - url: https://ops-sac-backoffice-operations.development.microservices.Capitole.com
     description: Develop
-  - url: https://ops-sac-backoffice-operations.qa.microservices.frubana.com
+  - url: https://ops-sac-backoffice-operations.qa.microservices.Capitole.com
     description: Quality
-  - url: https://ops-sac-backoffice-operations.production.microservices.frubana.com
+  - url: https://ops-sac-backoffice-operations.production.microservices.Capitole.com
     description: Production
 tags:
   - name: customers

@@ -1,5 +1,5 @@
-/* (C) Copyright 2024 Frubana. */
-package com.capitole.price.common.exception;
+/* (C) Copyright 2024 Capitole. */
+package com.capitole.common.exception;
 
 public record ApiErrorDTO(String message, Integer code) {
 

@@ -1,5 +1,5 @@
-/* (C) Copyright 2024 Frubana. */
-package com.frubana.ops.sac.backoffice.healthcheck;
+/* (C) Copyright 2024 Capitole. */
+package com.capitole.healthcheck;
 
 import java.util.Map;
 

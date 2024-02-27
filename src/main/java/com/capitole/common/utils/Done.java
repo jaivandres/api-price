@@ -1,5 +1,5 @@
-/* (C) Copyright 2024 Frubana. */
-package com.capitole.price.common.utils;
+/* (C) Copyright 2024 Capitole. */
+package com.capitole.common.utils;
 
 public record Done() {
 

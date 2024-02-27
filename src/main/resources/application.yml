@@ -1,0 +1,57 @@
+#Application
+application:
+  name: api-price
+
+#General configuration
+spring:
+  application:
+    name: api-price
+  http:
+    encoding:
+      charset: UTF-8
+      enabled: true
+      force: true
+  datasource:
+    url: jdbc:h2:mem:BackendCash;DB_CLOSE_DELAY=-1
+    username: admin
+    password: admin
+    driver-class-name: org.h2.Driver
+    continue-on-error: false
+    sql-script-encoding: UTF-8
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    repositories:
+      bootstrap-mode: default
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        trace: false
+      web-allow-others: true
+  flyway:
+    locations: filesystem:src/main/resources/migrations
+
+# Server
+server:
+  compression:
+    enabled: true
+    excluded-user-agents:
+    mime-types: text/html
+    min-response-size: 2048
+  port: 8080
+
+# Configuration Logging
+logging:
+  level:
+    root: INFO
+
+# Swagger - OpenApi 3
+springdoc:
+  swagger-ui:
+    url: /api-docs.yaml
+    enabled: ${SWAGGER_UI_ENABLED:true}
+    disable-swagger-default-url: true
+    syntaxHighlight:
+      activated: true
+      theme: obsidian

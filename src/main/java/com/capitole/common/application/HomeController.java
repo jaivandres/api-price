@@ -1,9 +1,10 @@
-/* (C) Copyright 2024 Frubana. */
-package com.capitole.price.common.application;
+/* (C) Copyright 2024 Capitole. */
+package com.capitole.common.application;
 
-import io.swagger.v3.oas.annotations.Hidden;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+
+import io.swagger.v3.oas.annotations.Hidden;
 
 @Controller
 @Hidden
