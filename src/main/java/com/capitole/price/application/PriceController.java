@@ -38,6 +38,7 @@ public class PriceController {
       @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime applicationDate,
       @RequestParam Integer productId,
       @RequestParam String brandId) {
+    log.info(String.format("Find prices: %s %s %s", applicationDate, productId, brandId));
     return service.find(applicationDate, productId, brandId);
   }
 

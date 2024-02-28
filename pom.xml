@@ -53,6 +53,19 @@
       <scope>test</scope>
     </dependency>
 
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-contract-stub-runner</artifactId>
+      <version>${spring-cloud-contract.version}</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-contract-verifier</artifactId>
+      <version>${spring-cloud-contract.version}</version>
+      <scope>test</scope>
+    </dependency>
+
     <!-- flywaydb -->
     <dependency>
       <groupId>org.flywaydb</groupId>
@@ -83,9 +96,16 @@
       <artifactId>lombok</artifactId>
       <optional>true</optional>
     </dependency>
+
     <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <exclusions>
+        <exclusion>
+          <groupId>org.codehaus.groovy</groupId>
+          <artifactId>groovy-xml</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
   </dependencies>
@@ -133,6 +153,18 @@
               <content>/* (C) Copyright $YEAR Capitole. */</content>
             </licenseHeader>
           </java>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-contract-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <version>4.0.4</version>
+        <configuration>
+          <baseClassForTests>
+            com.capitole.contract.BaseTestClass
+          </baseClassForTests>
         </configuration>
       </plugin>
     </plugins>

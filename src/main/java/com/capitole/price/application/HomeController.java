@@ -1,5 +1,5 @@
 /* (C) Copyright 2024 Capitole. */
-package com.capitole.healthcheck;
+package com.capitole.price.application;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

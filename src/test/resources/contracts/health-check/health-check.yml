@@ -1,0 +1,10 @@
+name: "health_check"
+description: "Health check"
+request:
+  method: GET
+  url: /health-check
+  headers:
+    Content-Type: application/json
+response:
+  status: 200
+  bodyFromFile: response/health-check-response.json
