@@ -22,6 +22,6 @@ public interface PriceRepository extends JpaRepository<Price, Integer> {
   List<Price> find(
       @Param("applicationDate") LocalDateTime applicationDate,
       @Param("productId") Integer productId,
-      @Param("brandId") String brandId);
+      @Param("brandId") Integer brandId);
 
 }

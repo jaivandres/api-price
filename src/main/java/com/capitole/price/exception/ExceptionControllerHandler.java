@@ -1,5 +1,5 @@
 /* (C) Copyright 2024 Capitole. */
-package com.capitole.price.application;
+package com.capitole.price.exception;
 
 import static org.springframework.http.ResponseEntity.status;
 
@@ -24,8 +24,6 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-import com.capitole.price.exception.ApiErrorDTO;
-import com.capitole.price.exception.BusinessException;
 import com.capitole.price.utils.JsonUtils;
 
 import lombok.extern.log4j.Log4j2;

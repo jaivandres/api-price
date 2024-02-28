@@ -27,7 +27,7 @@ public class PriceService {
   }
 
   @Transactional(readOnly = true)
-  public List<Price> find(LocalDateTime applicationDate, Integer productId, String brandId) {
+  public List<Price> find(LocalDateTime applicationDate, Integer productId, Integer brandId) {
     return repository.find(applicationDate, productId, brandId);
   }
 

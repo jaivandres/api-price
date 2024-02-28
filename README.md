@@ -38,3 +38,8 @@ Skip Test
 - url: jdbc:h2:mem:api-price;DB_CLOSE_DELAY=-1
 - username: admin
 - password: admin
+
+### Jacoco
+
+-../target/site/jacoco/index.html
+

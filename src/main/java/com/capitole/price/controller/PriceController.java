@@ -1,5 +1,5 @@
 /* (C) Copyright 2024 Capitole. */
-package com.capitole.price.application;
+package com.capitole.price.controller;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -47,7 +47,7 @@ public class PriceController {
       @RequestParam
       @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime applicationDate,
       @RequestParam Integer productId,
-      @RequestParam String brandId) {
+      @RequestParam Integer brandId) {
     log.info(String.format("Find prices: %s %s %s", applicationDate, productId, brandId));
     return service.find(applicationDate, productId, brandId);
   }
