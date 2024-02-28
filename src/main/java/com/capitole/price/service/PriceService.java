@@ -25,4 +25,20 @@ public class PriceService {
     return repository.find(applicationDate, productId, brandId);
   }
 
+  @Transactional(readOnly = true)
+  public Price getById(Integer id) {
+    return repository.getById(id);
+  }
+
+  @Transactional
+  public void deleteById(Integer id) {
+    repository.deleteById(id);
+  }
+
+  @Transactional
+  public Price create(Price price) {
+    return repository.save(price);
+  }
+
+
 }
