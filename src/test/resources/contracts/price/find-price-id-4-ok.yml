@@ -1,0 +1,10 @@
+name: "Find Price id 4"
+description: "Find Price id 4"
+request:
+  method: GET
+  url: /prices?applicationDate=2020-06-15T17:00:00&productId=35455&brandId=1
+  headers:
+    Content-Type: application/json
+response:
+  status: 200
+  bodyFromFile: response/find-price-id-1-ok-response.json

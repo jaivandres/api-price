@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Price API
+  description: API for managing product prices
+  version: 1.0.0
+servers:
+  - url: http://localhost:8080
+tags:
+  - name: prices
+    description: Prices Controller
+paths:
+  /prices:
+    get:
+      tags:
+        - prices
+      summary: Get Prices
+      description: Endpoint to get prices based on application date, product ID, and brand ID.
+      parameters:
+        - in: query
+          name: applicationDate
+          schema:
+            type: string
+            format: date-time
+          description: Date and time of application in ISO 8601 format (YYYY-MM-DDTHH:MM:SS)
+          required: true
+        - in: query
+          name: productId
+          schema:
+            type: integer
+          description: ID of the product
+          required: true
+        - in: query
+          name: brandId
+          schema:
+            type: string
+          description: ID of the brand
+          required: true
+      responses:
+        '200':
+          description: List of prices successfully obtained
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Price'
+components:
+  schemas:
+    Price:
+      type: object
+      properties:
+        id:
+          type: integer
+        brandId:
+          type: string
+        startDate:
+          type: string
+          format: date-time
+          example: "2020-06-14T00:00:00"
+        endDate:
+          type: string
+          format: date-time
+          example: "2020-12-31T23:59:59"
+        priceList:
+          type: number
+          example: 1
+        productId:
+          type: integer
+          example: 35455
+        priority:
+          type: integer
+          example: 0
+        price:
+          type: number
+          example: 35.50
+        curr:
+          type: string
+          example: EUR

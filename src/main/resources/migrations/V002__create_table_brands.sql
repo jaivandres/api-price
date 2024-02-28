@@ -1,0 +1,6 @@
+CREATE TABLE BRANDS (
+    id SERIAL PRIMARY KEY,
+    name VARCHAR
+);
+
+INSERT INTO brands (name) VALUES ('ZARA');
