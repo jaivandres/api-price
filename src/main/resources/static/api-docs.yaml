@@ -32,7 +32,7 @@ paths:
         - in: query
           name: brandId
           schema:
-            type: string
+            type: integer
           description: ID of the brand
           required: true
       responses:
@@ -44,6 +44,86 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Price'
+    post:
+      tags:
+        - prices
+      summary: Create Price
+      description: Endpoint to create a new Price.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Price'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Price'
+    put:
+      tags:
+        - prices
+      summary: Update Price
+      description: Endpoint to update a Price.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Price'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Price'
+    delete:
+      tags:
+        - prices
+      summary: Delete Price
+      description: Endpoint to delete a Price by its ID.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID of the Price to delete
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                example:
+                  message: Deleted successfully
+  /prices/{id}:
+    get:
+      tags:
+        - prices
+      summary: Get Price by ID
+      description: Endpoint to retrieve a Price by its ID.
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: integer
+          required: true
+          description: ID of the Price to retrieve
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Price'
 components:
   schemas:
     Price:
@@ -52,7 +132,7 @@ components:
         id:
           type: integer
         brandId:
-          type: string
+          type: integer
         startDate:
           type: string
           format: date-time
